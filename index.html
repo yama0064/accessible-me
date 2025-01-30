@@ -23,20 +23,28 @@
         <li><a href="#studio">Studio</a></li>
       </ul>
     </nav>
-    <img src="https://placekitten.com/1200/900" alt="image of a cat" class="banner">
+    <img src="https://picsum.photos/1200/900" alt="header-image" class="banner" >
   </header>
   <main class="container" role="main">
     <article class="main-content" role="article">
       <h2>Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <section class="owner" role="region">
+      <section class="owner" role="region" aria-labelledby="owner-title">
         <h2>Meet the owner</h2>
         <ul itemscope itemtype="https://schema.org/Person">
           <li><span itemprop="name">John Doe</span></li>
           <li><span itemprop="jobTitle">CEO</span></li>
-          <li><span itemprop="email">johnjoe@jambox.ca</span></li>
-          <li><span itemprop="telephone">613-000-0000</span></li>
+          <li>
+            <a href="mailto:johnjoe@jambox.ca" itemprop="email" aria-label="Email John Doe">
+              johnjoe@jambox.ca
+            </a>
+          </li>
+          <li>
+            <a href="tel:+16130000000" itemprop="telephone" aria-label="Call John Doe at 613-000-0000">
+              613-000-0000
+            </a>
+          </li>
         </ul>
         <h2>Address</h2>
         <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
@@ -51,13 +59,17 @@
         <h2>Contact Us</h2>
         <form action="thanks.html">
           <label for="full-name">Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <label for="Email">Email</label>
-          <input type="text" placeholder="Email">
-          <label for="Subject">Subject</label>
-          <input type="text" placeholder="Subject">
+          <input type="text" id="full-name" name="full-name" placeholder="Full Name" required>
+      
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+      
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      
           <label for="message">Your Message</label>
-          <textarea></textarea>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      
           <button type="submit">Send</button>
         </form>
       </section>

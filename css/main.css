@@ -28,8 +28,19 @@ img {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 1rem;
+  padding : 0;
+  background-color: beige;
+}
+
+.main-nav ul li{
+  border : solid 1px black;
+  transition-duration: 0.4s;
+}
+
+.main-nav ul li:hover {
+  background-color: white;
+  color: black;
 }
 
 .main-nav ul li {
@@ -60,7 +71,8 @@ form textarea {
 }
 
 form button {
-  background: none;
+  color: white;
+  background: blue;
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
